@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => {
   ]
 }
 
-export async function action({request}: ActionFunctionArgs) {
+export async function action({ request }: ActionFunctionArgs) {
   const data = await request.formData();
   let json = Object.fromEntries(data)
   console.log(json);
@@ -17,16 +17,16 @@ export async function action({request}: ActionFunctionArgs) {
 }
 
 export default function Index() {
-  
+
   return (
     <div className="p-10">
       <h1 className="text-5xl">Journal de travail</h1>
       <p className="mt-2 text-lg text-gray-400">Apprendre et faire. Mis à jour chaque semaine.</p>
 
       <div className="my-8 border p-3">
-      <p className="italic">
-        Créer une note pour la semaine
-      </p>
+        <p className="italic">
+          Créer une note pour la semaine
+        </p>
 
         <Form method="post" className="mt-2">
           <div>
